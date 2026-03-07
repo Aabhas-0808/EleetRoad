@@ -1,0 +1,13 @@
+class Solution(object):
+    def firstUniqChar(self, s):
+        l=[]
+        for i in range(0, len(s)):
+            if s[i] not in l:
+                l.append(s[i])
+                k = s.count(s[i])
+                if k==1:
+                    return i
+        else:
+            return -1
+            
+        

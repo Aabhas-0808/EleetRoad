@@ -1,0 +1,25 @@
+class Solution(object):
+    def addDigits(self, num):
+        c=0
+        n=1
+        l=len(str(num))
+        if num==0:
+            return 0
+        while l>0:
+            k = num % 10
+            num = num//10 
+            c = c + k 
+            if num == 0 :
+                print c,num
+                c = c + num 
+                num = c
+                l = len(str(num))
+                c = 0
+                if l==1:
+                    return num        
+            l = len(str(num))
+            n+=1
+        
+        if len(str(num))==1:
+            return num
+        

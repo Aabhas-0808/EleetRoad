@@ -1,0 +1,14 @@
+class Solution(object):
+    def countDigits(self, num):
+        p=len(str(num))
+        c=0
+        di=num
+        if p==1:
+            return 1
+        for i in range (0,p):
+            mo=di%10
+            if num%mo==0:
+                c=c+1
+            di=di//10
+        return c
+

@@ -6,19 +6,12 @@ class Solution(object):
         qu=nums[0]
         for i in nums:
             ele_sum+=i
-            if len(str(i)) == 1:
-                    #l.append(i)
-                    digi_sum+=i
-            while (len(str(i))>1):
-                re=i%10
-                #l.append(re)
+            j=i
+            while (j!=0):
+                re=j%10
                 digi_sum+=re
-                i=i//10
-                if len(str(i)) == 1:
-                    #l.append(i)
-                    digi_sum+=i
+                j=j//10
         
-
         '''for j in nums:
             if len(str(j)) > 1:
                 re=j%10
@@ -29,8 +22,6 @@ class Solution(object):
             else:
                 l.append(j)'''
         print(l)
-        '''for k in l:
-            digi_sum+=k'''
         diff=abs(ele_sum-digi_sum)
         return diff
         

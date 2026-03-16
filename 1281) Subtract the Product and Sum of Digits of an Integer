@@ -1,0 +1,12 @@
+class Solution(object):
+    def subtractProductAndSum(self, n):
+        s=0
+        p=1
+        while(n>0):
+            re=n%10
+            s+=re
+            p*=re
+            n=n//10
+        diff=p-s
+        return diff
+        

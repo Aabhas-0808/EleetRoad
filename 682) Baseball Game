@@ -1,0 +1,22 @@
+class Solution(object):
+    def calPoints(self, operations):
+        l=[]
+        c=0
+        for i in range(0,len(operations)):
+            if (operations[i]).isdigit():
+                l.append(operations[i])
+            elif operations[i]=='C':
+                l.pop()
+            elif operations[i]=='D':
+                h=int(l[-1])*2
+                l.append(h)
+            elif operations[i]=='+':
+                f=int(l[-1])+int(l[-2])
+                l.append(f)
+            else:
+                l.append(operations[i])
+        for i in range(0,len(l)):
+            c=c+int(l[i])
+        return c
+
+        

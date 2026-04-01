@@ -1,0 +1,8 @@
+class Solution(object):
+    def rotate(self, nums, k):
+        k=k%len(nums)
+        l=len(nums)
+        nums.reverse()
+        nums[:k]=nums[:k][::-1]
+        nums[k:l]=nums[k:l][::-1]
+        return nums
